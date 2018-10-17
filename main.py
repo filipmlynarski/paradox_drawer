@@ -76,13 +76,21 @@ class CanvasManager:
 		self.figures = []
 		self.canvas = canvas
 
-	def add_figure(self, points, center, turn='right', layers=30):
+	def add_figure(self, points, turn='right', layers=30):
+		center = self.find_center(points)
+
 		self.figures.append({
 			'points': points,
 			'center': center,
 			'turn': turn,
 			'layers': layers
 			})
+
+	def find_center(self, points):
+		center_x = sum(i[0] for i in points) // len(points)
+		center_y = sum(i[1] for i in points) // len(points)
+
+		return center_x, center_y
 
 	def modify_center(self, event):
 		for idx, figure in enumerate(self.figures):
@@ -120,7 +128,7 @@ def main():
 		elif line.startswith('COLUMNS'):
 			COLUMNS = int(line.split()[-1])
 
-		elif line.count(';') >= 3:
+		elif line.count(';') >= 2:
 			line = ''.join(line.split())
 			figures.append([])
 			points = []
@@ -134,8 +142,7 @@ def main():
 					else:
 						figures[-1].append(option)
 
-			figures[-1].insert(0, points[-1])
-			figures[-1].insert(0, points[:-1])
+			figures[-1].insert(0, points)
 
 	managers = []
 	canvases = []
