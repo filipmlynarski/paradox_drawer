@@ -1,5 +1,7 @@
 Paradox Drawer
 ===========
+This project contains code plot paradox alike figures on tkinter canvases.
+Inspired by [this video](https://www.youtube.com/watch?v=tAnlGfgv7oc "YouTube video")
 
 ![alt text](https://raw.githubusercontent.com/filipmlynarski/paradox_drawer/master/paradox_3x3.png)
 
