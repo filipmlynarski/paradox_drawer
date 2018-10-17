@@ -1,8 +1,8 @@
+# specify grid of cavases made of figures below
 ROWS 3
 COLUMNS 3
 
 # figure vertices coordinates; spin direction (optional); layers (optional)
-
 0,0; 600,0; 300,150
 
 0,0; 0,300; 300,150; left
