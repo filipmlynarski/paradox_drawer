@@ -112,6 +112,9 @@ def main():
 	file.close()
 
 	for line in content:
+		if line.startswith('#'):
+			continue
+
 		if line.startswith('ROWS'):
 			ROWS = int(line.split()[-1])
 		elif line.startswith('COLUMNS'):
