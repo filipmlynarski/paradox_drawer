@@ -16,5 +16,5 @@ Usage
 python3 main.py
 ```
 
-###### Configuration File
+#### Configuration File
 To modify figures follow instructions inside config file
