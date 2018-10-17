@@ -1,7 +1,7 @@
 ROWS 3
 COLUMNS 3
 
-# figure vertices coordinates, figure conter coordinates, spin direction (optional), layers (optional)
+# figure vertices coordinates; figure conter coordinates; spin direction (optional); layers (optional)
 
 0,0; 600,0; 300,150; 300,70
 
